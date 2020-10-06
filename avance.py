@@ -28,7 +28,7 @@ while not(dest=="ixtapa" or dest=="monterrey" or dest=="barcelona" or
           dest=="londres"):
     dest=str(input())
     
-    desglose_lista = []
+    desglose_lista = [0,1,2,3,4,5,6]
          
     if dest == "ixtapa":
         print("El costo del vuelo redondo idividual es $", COSTO_VUELO3,
@@ -45,9 +45,23 @@ while not(dest=="ixtapa" or dest=="monterrey" or dest=="barcelona" or
               num_noches))
 
         print("¿Desea imprimir los precios desglosados?")
-     
-   
-    #    print(desglose_lista[])
+        desglose=str(input())
+        if desglose=="si":
+            desglose_lista[0]="Vuelo redondo:",COSTO_VUELO3
+            desglose_lista[1]="Personas:",personas
+            desglose_lista[2]="TOTAL = $",COSTO_VUELO3*personas
+            desglose_lista[3]="Precio de la noche hotel",COSTO_HOTEL_ECONOMICO
+            desglose_lista[4]="Noches",num_noches
+            desglose_lista[5]="TOTAL = $",costo_noches(COSTO_HOTEL_ECONOMICO,
+                                                       num_noches)          
+            desglose_lista[6]="COSTO TOTAL DEL VIAJE:",costo_total(COSTO_VUELO3,
+                                                                   personas,
+                                                                   COSTO_HOTEL_ECONOMICO,
+                                                                   num_noches)
+
+            print(desglose_lista)
+        else:
+            print("Gracias por su compra")
 
     elif dest == "monterrey":          
         print("El costo del vuelo redondo es $", COSTO_VUELO2,
@@ -62,8 +76,26 @@ while not(dest=="ixtapa" or dest=="monterrey" or dest=="barcelona" or
         print("El costo total del viaje ha subido a $",
               costo_total(COSTO_VUELO2, personas,COSTO_HOTEL_ECONOMICO,
               num_noches))
+        
         print("¿Desea imprimir los precios desglosados?")
+        desglose=str(input())
+        if desglose=="si":
+            desglose_lista[0]="Vuelo redondo:",COSTO_VUELO2
+            desglose_lista[1]="Personas:",personas
+            desglose_lista[2]="TOTAL = $",COSTO_VUELO2*personas
+            desglose_lista[3]="Precio de la noche hotel",COSTO_HOTEL_ECONOMICO
+            desglose_lista[4]="Noches",num_noches
+            desglose_lista[5]="TOTAL = $",costo_noches(COSTO_HOTEL_ECONOMICO,
+                                                       num_noches)          
+            desglose_lista[6]="COSTO TOTAL DEL VIAJE:",costo_total(COSTO_VUELO2,
+                                                                   personas,
+                                                                   COSTO_HOTEL_ECONOMICO,
+                                                                   num_noches)
 
+            print(desglose_lista)
+        else:
+            print("Gracias por su compra")
+            
     elif dest == "barcelona":          
         print("El costo del vuelo redondo es $", COSTO_VUELO1,
               "y el costo de una noche es $", COSTO_HOTEL_ECONOMICO,
@@ -77,13 +109,31 @@ while not(dest=="ixtapa" or dest=="monterrey" or dest=="barcelona" or
         print("El costo total del viaje ha subido a $",
               costo_total(COSTO_VUELO1, personas,COSTO_HOTEL_ECONOMICO,
               num_noches))
+        
         print("¿Desea imprimir los precios desglosados?")
+        desglose=str(input())
+        if desglose=="si":
+            desglose_lista[0]="Vuelo redondo:",COSTO_VUELO1
+            desglose_lista[1]="Personas:",personas
+            desglose_lista[2]="TOTAL = $",COSTO_VUELO1*personas
+            desglose_lista[3]="Precio de la noche hotel",COSTO_HOTEL_ECONOMICO
+            desglose_lista[4]="Noches",num_noches
+            desglose_lista[5]="TOTAL = $",costo_noches(COSTO_HOTEL_ECONOMICO,
+                                                       num_noches)          
+            desglose_lista[6]="COSTO TOTAL DEL VIAJE:",costo_total(COSTO_VUELO1,
+                                                                   personas,
+                                                                   COSTO_HOTEL_ECONOMICO,
+                                                                   num_noches)
 
+            print(desglose_lista)
+        else:
+            print("Gracias por su compra")
+            
 
     elif dest == "londres":
         print("El costo del vuelo redondo es $", COSTO_VUELO1,
-              "y el costo de una noche es $", COSTO_HOTEL_ECONOMICO,
-              "-","Total $",COSTO_VUELO1 + COSTO_HOTEL_ECONOMICO)
+              "y el costo de una noche es $", COSTO_HOTEL_LUJO,
+              "-","Total $",COSTO_VUELO1 + COSTO_HOTEL_LUJO)
         print("¿Cuántas noches se va a quedar?")
         num_noches=int(input())
         print("El costo de hotel se ha actualizado a $",
@@ -91,6 +141,24 @@ while not(dest=="ixtapa" or dest=="monterrey" or dest=="barcelona" or
         print("¿Cuántas personas son?")
         personas=int(input())
         print("El costo total del viaje ha subido a $",
-              costo_total(COSTO_VUELO1, personas,COSTO_HOTEL_ECONOMICO,
+              costo_total(COSTO_VUELO1, personas,COSTO_HOTEL_LUJO,
               num_noches))
-        print("¿Desea imprimir los precios desglosados?")        
+        
+        print("¿Desea imprimir los precios desglosados?")
+        desglose=str(input())
+        if desglose=="si":
+            desglose_lista[0]="Vuelo redondo:",COSTO_VUELO1
+            desglose_lista[1]="Personas:",personas
+            desglose_lista[2]="TOTAL = $",COSTO_VUELO1*personas
+            desglose_lista[3]="Precio de la noche hotel",COSTO_HOTEL_LUJO
+            desglose_lista[4]="Noches",num_noches
+            desglose_lista[5]="TOTAL = $",costo_noches(COSTO_HOTEL_LUJO,
+                                                       num_noches)          
+            desglose_lista[6]="COSTO TOTAL DEL VIAJE:",costo_total(COSTO_VUELO1,
+                                                                   personas,
+                                                                   COSTO_HOTEL_LUJO,
+                                                                   num_noches)
+
+            print(desglose_lista)
+        else:
+            print("Gracias por su compra")
