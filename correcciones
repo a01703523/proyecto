@@ -1,0 +1,16 @@
+Sub-Competencia: componente: usa de manera eficaz los operadores en un programa (avance 1)
+
+Error original: no tenía.
+
+Cambio realizado: los implementé en las funciones y prints.
+
+def costo_noches(costo_hotel, num_noches):
+    return costo_hotel*num_noches
+
+def costo_total(costo_vuelo, personas, costo_hotel, num_noches):
+    costo_n=costo_noches(costo_hotel, num_noches)*(personas/2)
+    return (costo_vuelo*personas)+(costo_n)
+    
+    
+Líneas de código donde se ve la corrección: de 12 a 17 (prinncipalmente) 
+también en las 41, 57
