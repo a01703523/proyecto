@@ -14,3 +14,13 @@ def costo_total(costo_vuelo, personas, costo_hotel, num_noches):
     
 Líneas de código donde se ve la corrección: de 12 a 17 (prinncipalmente) 
 también en las 41, 57
+
+
+=============================================================================================
+Sub-Competencia: El proyecto no contiene código basura (avance 1)
+
+Error original: había puesto líneas de código innecesarias y no las borré.
+
+Cambio realizado: ya no hay código basura
+
+Líneas de código donde se ve la corrección: todas
